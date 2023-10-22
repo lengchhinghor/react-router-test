@@ -1,7 +1,7 @@
 FROM node:16.18.1 as build
 WORKDIR /app
 COPY ./ ./
-RUN npm install --force
+RUN npm install
 RUN npm run build
 
 FROM nginx:1.23.2
